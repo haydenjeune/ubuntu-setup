@@ -19,15 +19,12 @@ export BIN_DIRECTORY="$HOME/bin"
 
 # ADD THE SCRIPTS YOU WANT TO RUN
 SCRIPTS=(
-    bat
-    openjdk11
-    clojure
-    improve-privacy
-    nvm
+    golang
+    git
     rustup
     vim
     vscode
-    yarn
+    scroll-speed
 )
 
 # NO CHANGES BELOW THIS LINE
