@@ -25,6 +25,7 @@ SCRIPTS=(
     vim
     vscode
     scroll-speed
+    spotify
 )
 
 # NO CHANGES BELOW THIS LINE
