@@ -19,17 +19,18 @@ if [ ! -f "$MARKER_DIRECTORY"/"$MARKER" ]; then
         sudo apt install imwheel -y
         cat >~/.imwheelrc<<EOF
 ".*"
-None,      Up,   Button4, 1
-None,      Down, Button5, 1
-Control_L, Up,   Control_L|Button4
-Control_L, Down, Control_L|Button5
-Shift_L,   Up,   Shift_L|Button4
-Shift_L,   Down, Shift_L|Button5
+None, Up,    Button4, 1
+None, Down,  Button5, 1
+None, Left, Button6, 1
+None, Right,  Button7, 1
 EOF
     fi
-    SCROLL_SPEED="3"
-    sed -i "s/\($TARGET_KEY *Button4, *\).*/\1$SCROLL_SPEED/" ~/.imwheelrc # find the string Button4, and write new value.
-    sed -i "s/\($TARGET_KEY *Button5, *\).*/\1$SCROLL_SPEED/" ~/.imwheelrc # find the string Button5, and write new value.
+    VERTICAL_SCROLL_SPEED="3"
+    HORIZONTAL_SCROLL_SPEED="2"
+    sed -i "s/\($TARGET_KEY *Button4, *\).*/\1$VERTICAL_SCROLL_SPEED/" ~/.imwheelrc # find the string Button4, and write new value.
+    sed -i "s/\($TARGET_KEY *Button5, *\).*/\1$VERTICAL_SCROLL_SPEED/" ~/.imwheelrc
+    sed -i "s/\($TARGET_KEY *Button6, *\).*/\1$HORIZONTAL_SCROLL_SPEED/" ~/.imwheelrc
+    sed -i "s/\($TARGET_KEY *Button7, *\).*/\1$HORIZONTAL_SCROLL_SPEED/" ~/.imwheelrc
     cat ~/.imwheelrc
     imwheel -kill
     finish_install "$MARKER"
