@@ -26,6 +26,9 @@ SCRIPTS=(
     vscode
     scroll-speed
     spotify
+    zsh
+    zsh-powerlevel
+    docker
 )
 
 # NO CHANGES BELOW THIS LINE
